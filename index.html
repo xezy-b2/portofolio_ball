@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio 3D Pokémon - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header reveal">
+        <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="XezyBall 3D Accueil">
+        <span class="brand-logo"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#fff" stroke="#000" stroke-width="4"/>
+        <path d="M2 32h60" stroke="#000" stroke-width="4"/>
+        <path d="M2 32 A30 30 0 0 1 62 32 L62 32 L2 32 Z" fill="#ff3b3f" />
+        <circle cx="32" cy="32" r="14" fill="#fff" stroke="#000" stroke-width="4"/>
+        <circle cx="32" cy="32" r="10" fill="#ff3b3f" stroke="#000" stroke-width="4"/>
+        <circle cx="32" cy="32" r="6" fill="#fff" stroke="#000" stroke-width="4"/>
+      </svg></span><span class="brand-text">XezyBall <strong>3D</strong></span>
+      </a>
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="pokeballs.html">Pokéball</a></li>
+                    <li><a href="figurines.html">Figurines</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero full reveal">
+            <img src="images/hero.jpg" alt="Fond abstrait sombre" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <p class="subtitle reveal delay-1">CRÉATIONS 3D | POKÉMON TECH</p>
+                <h1 class="title-xl reveal delay-2">
+                    Donner vie à l'univers <br>
+                    <strong style="color:var(--accent)">POKÉMON</strong> en 3D
+                </h1>
+                <div class="actions reveal delay-3">
+                    <a href="pokeballs.html" class="btn primary">Explorer les Pokéballs</a>
+                    <a href="figurines.html" class="btn ghost">Voir les Figurines</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section community reveal">
+            <h2 class="section-title">Rejoignez la Communauté</h2>
+            <div class="chip-group">
+                <a href="[Lien Instagram]" class="chip discord" style="background:#E1306C;"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="[Lien ArtStation]" class="chip makerworld" style="background:#13a0c7;"><i class="fab fa-artstation"></i> ArtStation</a>
+                <a href="https://www.patreon.com/cw/xezy" class="chip patreon"><i class="fab fa-patreon"></i> Patreon (Soutien)</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer reveal">
+        <div class="container footer-inner">
+            <p>&copy; 2025 xezy - Impression 3D Pokémon.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('open');
+        });
+
+        // Script de révélation au scroll (nécessite le JS de votre côté)
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

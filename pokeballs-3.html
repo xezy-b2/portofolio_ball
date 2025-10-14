@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio 3D Pokémon - Pokéballs (3/4)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+     <a class="brand" href="index.html"><img class="brand-logo" src="images/Gengar Pokemon.svg" alt="Logo XezyBall" width="50" height="auto"><span class="brand-text">XezyBall <strong>3D</strong></span></a>
+            </a>
+            
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pokeballs.html" class="active">Pokéball</a></li>
+                    <li><a href="figurines.html">Figurines</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2 class="section-title">Collection Pokéballs 🔴⚪ (Page 3/4)</h2>
+            <div class="container">
+                <div class="grid cards">
+                    <div class="card reveal delay-1"><img src="images/carapuce_ball.png" alt="Pokéball 1"><div class="card-body"><div><h4>Pokéball Classique</h4><p class="muted">FDM - PLA</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-2"><img src="images/pokeball_classique_02.jpg" alt="Pokéball 2"><div class="card-body"><div><h4>Pokéball Rouge Vif</h4><p class="muted">Peinture Aérographe</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-3"><img src="images/pokeball_classique_03.jpg" alt="Pokéball 3"><div class="card-body"><div><h4>Pokéball Brillante</h4><p class="muted">Finition époxy</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-1"><img src="images/pokeball_classique_04.jpg" alt="Pokéball 4"><div class="card-body"><div><h4>Pokéball Classique Art.</h4><p class="muted">Design Articulé</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-2"><img src="images/masterball_05.jpg" alt="Pokéball 5"><div class="card-body"><div><h4>Master Ball (Unique)</h4><p class="muted">Résine - Violet profond</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-3"><img src="images/masterball_06.jpg" alt="Pokéball 6"><div class="card-body"><div><h4>Master Ball Peinte</h4><p class="muted">Détails Or métallisé</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-1"><img src="images/ultraball_07.jpg" alt="Pokéball 7"><div class="card-body"><div><h4>Ultra Ball Standard</h4><p class="muted">FDM - Bicolore</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-2"><img src="images/ultraball_08.jpg" alt="Pokéball 8"><div class="card-body"><div><h4>Ultra Ball Usée</h4><p class="muted">Effet Weathering</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-3"><img src="images/superball_09.jpg" alt="Pokéball 9"><div class="card-body"><div><h4>Super Ball Bleue</h4><p class="muted">FDM - Post-traitement</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="card reveal delay-1"><img src="images/superball_10.jpg" alt="Pokéball 10"><div class="card-body"><div><h4>Super Ball Chrome</h4><p class="muted">Finition Chrome</p></div><a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a></div></div>
+                </div>
+
+              <div class="pagination">
+                    <a href="pokeballs.html">1</a>
+                    <a href="pokeballs-2.html">2</a>
+                    <a href="pokeballs-3.html"class="current">3</a>
+                    <a href="pokeballs-4.html">4</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025 [Votre Nom/Pseudo] - Impression 3D Pokémon.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('open');
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

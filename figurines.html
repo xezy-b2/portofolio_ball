@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio 3D Pokémon - Figurines</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+     <a class="brand" href="index.html"><img class="brand-logo" src="images/Phyllali.png" alt="Logo XezyBall" width="50" height="auto"><span class="brand-text">XezyBall <strong>3D</strong></span></a>
+            </a>
+            
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pokeballs.html">Pokéball</a></li>
+                    <li><a href="figurines.html" class="active">Figurines</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2 class="section-title">Collection Figurines ⚡🔥</h2>
+            <div class="container">
+                <div class="grid cards">
+                    <div class="card reveal delay-1">
+                        <img src="images/figurine_pikachu.jpg" alt="Figurine Pikachu">
+                        <div class="card-body">
+                            <div>
+                                <h4>Pikachu Stylisé</h4>
+                                <p class="muted">Résine - Peinture à la main</p>
+                            </div>
+                            <a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="card reveal delay-2">
+                        <img src="images/figurine_dracaufeu.jpg" alt="Figurine Dracaufeu">
+                        <div class="card-body">
+                            <div>
+                                <h4>Dracaufeu Dynamax</h4>
+                                <p class="muted">Grand format FDM - Post-traitement</p>
+                            </div>
+                            <a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="card reveal delay-3">
+                        <img src="images/figurine_bulbizarre.jpg" alt="Figurine Bulbizarre">
+                        <div class="card-body">
+                            <div>
+                                <h4>Bulbizarre Végétal</h4>
+                                <p class="muted">Résine - Textures organiques</p>
+                            </div>
+                            <a href="#" class="btn small link">Détails <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025 [Votre Nom/Pseudo] - Impression 3D Pokémon.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('open');
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
